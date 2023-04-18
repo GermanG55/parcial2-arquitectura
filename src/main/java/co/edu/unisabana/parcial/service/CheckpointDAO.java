@@ -1,6 +1,7 @@
 package co.edu.unisabana.parcial.service;
 
 import co.edu.unisabana.parcial.repository.sql.entity.Checkpoint;
+import co.edu.unisabana.parcial.repository.sql.entity.CheckpointInteface;
 import co.edu.unisabana.parcial.repository.sql.jpa.CheckpointRepository;
 import co.edu.unisabana.parcial.service.model.Checkin;
 import co.edu.unisabana.parcial.service.model.Checkout;
@@ -17,12 +18,12 @@ public class CheckpointDAO implements CheckpointPort {
 
   @Override
   public void saveCheckin(Checkin checkin) {
-    checkpointRepository.save(Checkpoint.fromCheckin(checkin));
+    checkpointRepository.save(CheckpointInteface.fromCheckin(checkin));
   }
 
   @Override
   public void saveCheckout(Checkout checkout) {
-    checkpointRepository.save(Checkpoint.fromCheckout(checkout));
+    checkpointRepository.save(CheckpointInteface.fromCheckout(checkout));
   }
 
   @Override

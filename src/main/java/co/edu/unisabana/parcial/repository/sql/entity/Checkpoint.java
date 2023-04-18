@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Checkpoint {
+public class Checkpoint implements CheckpointInteface{
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
